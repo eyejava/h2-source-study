@@ -26,6 +26,7 @@ import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.h2.constant.ErrorCode;
 import org.h2.expression.ParameterInterface;
 import org.h2.message.DbException;
@@ -38,7 +39,7 @@ import org.h2.value.ValueNull;
  * Represents a callable statement.
  *
  * @author Sergi Vladykin
- * @author Thomas Mueller
+ * @author Thomas Mueller  
  */
 public class JdbcCallableStatement extends JdbcPreparedStatement implements CallableStatement {
 
@@ -1634,5 +1635,19 @@ public class JdbcCallableStatement extends JdbcPreparedStatement implements Call
             throw logAndConvert(e);
         }
     }
+
+	@Override
+	public <T> T getObject(int parameterIndex, Class<T> type)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <T> T getObject(String parameterName, Class<T> type)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

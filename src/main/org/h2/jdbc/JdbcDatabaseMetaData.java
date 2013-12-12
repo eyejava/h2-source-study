@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.RowIdLifetime;
 import java.sql.SQLException;
+
 import org.h2.constant.SysProperties;
 import org.h2.engine.Constants;
 import org.h2.message.Trace;
@@ -21,7 +22,7 @@ import org.h2.util.StatementBuilder;
 import org.h2.util.StringUtils;
 
 /**
- * Represents the meta data for a database.
+ * Represents the meta data for a database.  
  */
 public class JdbcDatabaseMetaData extends TraceObject implements DatabaseMetaData {
 
@@ -3143,5 +3144,19 @@ public class JdbcDatabaseMetaData extends TraceObject implements DatabaseMetaDat
         }
         return mode;
     }
+
+	@Override
+	public ResultSet getPseudoColumns(String catalog, String schemaPattern,
+			String tableNamePattern, String columnNamePattern)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean generatedKeyAlwaysReturned() throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }
