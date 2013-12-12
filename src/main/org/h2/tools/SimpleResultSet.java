@@ -29,6 +29,7 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Map;
+
 import org.h2.constant.ErrorCode;
 import org.h2.message.DbException;
 import org.h2.util.MathUtils;
@@ -2367,5 +2368,18 @@ public class SimpleResultSet implements ResultSet, ResultSetMetaData {
     public boolean getAutoClose() {
         return autoClose;
     }
+
+	@Override
+	public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <T> T getObject(String columnLabel, Class<T> type)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
